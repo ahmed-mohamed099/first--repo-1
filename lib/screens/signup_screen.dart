@@ -20,11 +20,12 @@ class Signupscreen extends StatelessWidget {
 
                 // Carrot Logo
                 Center(
-                  child: Image.asset(
-                    "assets/images/carrot.png",
-                    width: 50,
+                  child: Image.asset("assets/images/Group.png", width: 50,),
+                   
+                  
                   ),
-                ),
+              
+                
 
                 const SizedBox(height: 100.2),
 
@@ -205,12 +206,15 @@ class Signupscreen extends StatelessWidget {
                   ],
                 ),
 
-                const SizedBox(height: 20),
-              ],
+             
+             
+               const SizedBox(height: 20),
+              ]
+            )             
             ),
           ),
         ),
-      ),
-    );
+      );
+    
   }
 }

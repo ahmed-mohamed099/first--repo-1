@@ -19,7 +19,7 @@ class Loginscreen extends StatelessWidget {
               SizedBox(
                 height: 28.42,
               ),
-              Center(child: Image.asset("assets/images/carrot.png")),
+              Center(child: Image.asset("assets/images/Group.png")),
               SizedBox(
                 height: 100.2,
               ),
@@ -68,12 +68,10 @@ class Loginscreen extends StatelessWidget {
                   )
               )),
 
-            
+            SizedBox(height: 10,),
               Align(
                 alignment: Alignment.bottomRight,
-                child: Text("Forget password?",style:TextStyle(
-               
-                ),),
+                child: TextButton(onPressed: (){}, child: Text("forget password?",style: TextStyle(color: Colors.green),))
               ),
               SizedBox(height: 30,),
               InkWell(
