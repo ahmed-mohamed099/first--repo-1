@@ -2,6 +2,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:grocery_app/screens/bottom_nev_bar_screen.dart';
 import 'package:grocery_app/screens/login__screens.dart';
 
 class GorceryApp extends StatelessWidget {
@@ -10,7 +11,7 @@ class GorceryApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Loginscreen(),
+      home: BottomNevBarScreen(),
     );
     
   }
