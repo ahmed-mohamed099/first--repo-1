@@ -54,12 +54,26 @@ class ShopScreen extends StatelessWidget {
      HomeSlider(),
      SizedBox(height: 20),
 
-Text(
-  "Exclusive Offer",
-  style: TextStyle(
-    fontSize: 24,
-    fontWeight: FontWeight.bold,
-  ),
+Row(
+  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  children: [
+    const Text(
+      "Exclusive Offer",
+      style: TextStyle(
+        fontSize: 24,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    TextButton(
+      onPressed: () {},
+      child: const Text(
+        "See all",
+        style: TextStyle(
+          color: Color(0xff53B175),
+        ),
+      ),
+    ),
+  ],
 ),
 
 SizedBox(height: 20),
@@ -97,17 +111,26 @@ SingleChildScrollView(
 
 
 SizedBox(height: 20),
-Align(
-  alignment: Alignment.centerLeft,
-  child: Text(
-    "Best Selling",
-    
-    
-    style: TextStyle(
-      fontSize: 24,
-      fontWeight: FontWeight.bold,
+Row(
+  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  children: [
+    const Text(
+      "Exclusive Offer",
+      style: TextStyle(
+        fontSize: 24,
+        fontWeight: FontWeight.bold,
+      ),
     ),
-  ),
+    TextButton(
+      onPressed: () {},
+      child: const Text(
+        "See all",
+        style: TextStyle(
+          color: Color(0xff53B175),
+        ),
+      ),
+    ),
+  ],
 ),
 SizedBox(height: 20),
 
@@ -154,17 +177,26 @@ ProductCard(
   ),
 ),
 SizedBox(height: 20),
-Align(
-  alignment: Alignment.centerLeft,
-  child: Text(
-    "Groceries",
-    
-    
-    style: TextStyle(
-      fontSize: 24,
-      fontWeight: FontWeight.bold,
+Row(
+  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  children: [
+    const Text(
+      "Groceries",
+      style: TextStyle(
+        fontSize: 24,
+        fontWeight: FontWeight.bold,
+      ),
     ),
-  ),
+    TextButton(
+      onPressed: () {},
+      child: const Text(
+        "See all",
+        style: TextStyle(
+          color: Color(0xff53B175),
+        ),
+      ),
+    ),
+  ],
 ),
 SizedBox(height: 15,),
 SingleChildScrollView(
@@ -186,7 +218,7 @@ SingleChildScrollView(
           image: "assets/images/pngfuel 4.png",
           name: "Beef",
           subTitle: "1kg, Price",
-          price: "\$4.99",
+          price: "\$8.99",
         ),
   
         SizedBox(width: 15),
@@ -195,7 +227,7 @@ SingleChildScrollView(
           image: "assets/images/pngfuel 5.png",
           name: "chickan",
           subTitle: "1kg, Price",
-          price: "\$4.99",
+          price: "\$7.99",
   
         ),
       SizedBox(width: 15),

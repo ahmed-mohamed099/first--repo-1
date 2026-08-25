@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_app/screens/product_details_screen.dart';
 
 class ProductCard extends StatelessWidget {
   final String image;
@@ -16,7 +17,22 @@ class ProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return InkWell(
+  onTap: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => ProductDetailsScreen(
+          image: image,
+          name: name,
+          subTitle: subTitle,
+          price: price,
+        ),
+      ),
+    );
+  },
+  child: Container(
+    
       width: 150,
       height: 260,
       padding: const EdgeInsets.all(15),
@@ -87,6 +103,8 @@ class ProductCard extends StatelessWidget {
           ),
         ],
       ),
+    ),
     );
+
   }
 }
