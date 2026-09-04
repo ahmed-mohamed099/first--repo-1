@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'cart_data.dart';
+import 'favorite_data.dart';
+
 
 class ProductDetailsScreen extends StatelessWidget {
   final String image;
@@ -60,10 +63,19 @@ class ProductDetailsScreen extends StatelessWidget {
                   ),
                 ),
 
-                const Icon(
-                  Icons.favorite_border,
-                  size: 30,
-                ),
+               IconButton(
+           onPressed: () {
+                FavoriteData.items.add({
+                   "name": name,
+                "price": price,
+                     "image": image,
+          });
+          },
+           icon: const Icon(
+          Icons.favorite_border,
+                 size: 30,
+                   ),
+                   ),
               ],
             ),
 
@@ -177,7 +189,19 @@ class ProductDetailsScreen extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xff53B175),
                 ),
-                onPressed: () {},
+                onPressed: () {
+  CartData.items.add({
+    "name": name,
+    "price": price,
+    "image": image,
+  });
+
+  ScaffoldMessenger.of(context).showSnackBar(
+    SnackBar(
+      content: Text("$name added to cart"),
+    ),
+  );
+},
                 child: const Text(
                   "Add To Basket",
                   style: TextStyle(

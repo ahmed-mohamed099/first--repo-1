@@ -57,32 +57,41 @@ Widget build(BuildContext context) {
 
           SizedBox(height: 15),
 
-          Container(
-            height: 67,
-            width: double.infinity,
-            decoration: BoxDecoration(
-              color: Color(0xffF2F3F2),
-              borderRadius: BorderRadius.circular(19),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.logout,
-                  color: Color(0xff53B175),
-                ),
-                SizedBox(width: 10),
-                Text(
-                  "Log Out",
-                  style: TextStyle(
-                    color: Color(0xff53B175),
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-              ],
-            ),
+          GestureDetector(
+  onTap: () {
+    Navigator.pushNamedAndRemoveUntil(
+      context,
+      '/login',
+      (route) => false,
+    );
+  },
+  child: Container(
+    height: 67,
+    width: double.infinity,
+    decoration: BoxDecoration(
+      color: Color(0xffF2F3F2),
+      borderRadius: BorderRadius.circular(19),
+    ),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(
+          Icons.logout,
+          color: Color(0xff53B175),
+        ),
+        SizedBox(width: 10),
+        Text(
+          "Log Out",
+          style: TextStyle(
+            color: Color(0xff53B175),
+            fontSize: 18,
+            fontWeight: FontWeight.w600,
           ),
+        ),
+      ],
+    ),
+  ),
+),
         ],
       ),
     ),
